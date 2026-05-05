@@ -892,6 +892,40 @@ button { font-family: inherit; cursor: pointer; }
 .kbd-rb { margin-left: -2px; }
 
 /* =====================================================
+   Read More expanded section
+   ===================================================== */
+.tile-hero-expanded {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.55s var(--ease-out), opacity 0.4s ease;
+}
+.tile-hero-expanded.open {
+  max-height: 900px;
+  opacity: 1;
+}
+
+/* Reset button element to match cta-button span look */
+button.cta-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+/* Locked link tiles */
+.link-tile-locked {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--line) !important;
+}
+.link-tile-locked::after { display: none; }
+.link-tile-locked .link-icon { background: rgba(255,255,255,0.03) !important; }
+
+/* =====================================================
    Responsive
    ===================================================== */
 @media (max-width: 900px) {

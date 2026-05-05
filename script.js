@@ -79,6 +79,18 @@
       else if (e.key === '3') { activateTab(tabsArr[2]); }
   });
 
+  // ---------- Read More toggle ----------
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const readMoreExpanded = document.getElementById('readMoreExpanded');
+  if (readMoreBtn && readMoreExpanded) {
+    readMoreBtn.addEventListener('click', () => {
+      const isOpen = readMoreExpanded.classList.toggle('open');
+      readMoreExpanded.setAttribute('aria-hidden', !isOpen);
+      readMoreBtn.querySelector('.cta-key').textContent = isOpen ? 'A' : 'A';
+      readMoreBtn.lastChild.textContent = isOpen ? ' Read Less' : ' Read More';
+    });
+  }
+
   // ---------- Subtle pointer-driven highlight on tiles ----------
   // (Blobs are CSS-driven so we don't fight their keyframe animation.)
   document.querySelectorAll('.tile-hero, .feat-tile, .member-tile, .link-tile').forEach(el => {
