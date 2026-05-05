@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SealPoint Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient animated background -->
+  <div class="ambient" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grain"></div>
+    <div class="scanlines"></div>
+  </div>
+
+  <!-- Boot overlay -->
+  <div class="boot" id="boot">
+    <div class="boot-ring">
+      <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="90" />
+        <circle cx="100" cy="100" r="70" class="boot-inner" />
+      </svg>
+      <div class="boot-x">X</div>
+    </div>
+  </div>
+
+  <!-- Achievement popup -->
+  <div class="achievement" id="achievement">
+    <div class="achievement-orb">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z"/></svg>
+    </div>
+    <div class="achievement-text">
+      <div class="achievement-label">Achievement Unlocked</div>
+      <div class="achievement-title">Welcome to SealPoint — 50G</div>
+    </div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-orb">
+        <div class="logo-arc logo-arc-1"></div>
+        <div class="logo-arc logo-arc-2"></div>
+        <div class="logo-core"></div>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">SealPoint</div>
+        <div class="brand-sub">CONSULTING · NXE</div>
+      </div>
+    </div>
+    <div class="status">
+      <span class="status-dot"></span>
+      <span class="status-text">ONLINE</span>
+      <span class="status-divider"></span>
+      <span class="gscore"><span class="g-icon">G</span> 1,250</span>
+    </div>
+  </header>
+
+  <!-- Tab navigation -->
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="home" role="tab">home</button>
+    <button class="tab" data-tab="team" role="tab">team</button>
+    <button class="tab" data-tab="links" role="tab">links</button>
+    <div class="tab-indicator" id="tabIndicator"></div>
+  </nav>
+
+  <!-- Tagline -->
+  <div class="tagline-bar">
+    <div class="tagline-line"></div>
+    <div class="tagline">Applied Systems. Built for Growth.</div>
+    <div class="tagline-line"></div>
+  </div>
+
+  <!-- Panels -->
+  <main class="panels" id="panels">
+
+    <!-- ============ HOME ============ -->
+    <section class="panel active" data-panel="home">
+      <div class="panel-heading">
+        <div class="panel-num">01</div>
+        <div class="panel-title">Project Brief</div>
+        <div class="panel-meta">The Real Seal Co. · Binghamton, NY</div>
+      </div>
+
+      <div class="home-layout">
+        <article class="tile tile-hero" style="--delay:0ms">
+          <div class="tile-tag">FEATURED</div>
+          <h1 class="tile-hero-title">A Salesforce-based operations system for a growing seal coating business.</h1>
+          <p class="tile-hero-body">
+            SealPoint Consulting partnered with The Real Seal Co., a seal coating business based in Binghamton, NY, to design and implement a Salesforce-based operations management system. The goal of this project was to replace a manual and fragmented process for managing customers, scheduling jobs, and coordinating employees.
+          </p>
+          <p class="tile-hero-body">
+            The solution centralizes all core business functions into a single platform, allowing for efficient tracking of customer information, job scheduling, and workforce management. By integrating reporting and dashboard capabilities, the system provides real-time insights into operations, revenue, and performance. This implementation enables The Real Seal to operate more efficiently, reduce errors, and scale its business with a structured and data-driven approach.
+          </p>
+          <div class="tile-hero-cta">
+            <span class="cta-button"><span class="cta-key">A</span> Read More</span>
+            <span class="cta-button cta-button-alt"><span class="cta-key">Y</span> View System</span>
+          </div>
+        </article>
+
+        <div class="features-rail">
+          <div class="features-label">KEY FEATURES</div>
+          <a class="feat-tile" style="--delay:80ms">
+            <div class="feat-icon">◉</div>
+            <div class="feat-text">Centralized customer database</div>
+          </a>
+          <a class="feat-tile" style="--delay:160ms">
+            <div class="feat-icon">▤</div>
+            <div class="feat-text">Job scheduling and tracking</div>
+          </a>
+          <a class="feat-tile" style="--delay:240ms">
+            <div class="feat-icon">⚑</div>
+            <div class="feat-text">Employee assignment & coordination</div>
+          </a>
+          <a class="feat-tile" style="--delay:320ms">
+            <div class="feat-icon">▦</div>
+            <div class="feat-text">Real-time reporting & dashboards</div>
+          </a>
+          <a class="feat-tile" style="--delay:400ms">
+            <div class="feat-icon">▲</div>
+            <div class="feat-text">Improved operational efficiency</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="panel" data-panel="team">
+      <div class="panel-heading">
+        <div class="panel-num">02</div>
+        <div class="panel-title">Our Team</div>
+        <div class="panel-meta">5 members · University at Buffalo</div>
+      </div>
+
+      <div class="team-grid">
+        <a class="member-tile" href="mailto:jbeatty3@buffalo.edu" style="--delay:0ms">
+          <div class="member-avatar"><span>JB</span></div>
+          <div class="member-info">
+            <div class="member-name">Joseph Beatty</div>
+            <div class="member-email">jbeatty3@buffalo.edu</div>
+          </div>
+          <div class="member-arrow">›</div>
+        </a>
+
+        <a class="member-tile" href="mailto:dariodib@buffalo.edu" style="--delay:80ms">
+          <div class="member-avatar"><span>DD</span></div>
+          <div class="member-info">
+            <div class="member-name">Dario DiBenedetto</div>
+            <div class="member-email">dariodib@buffalo.edu</div>
+          </div>
+          <div class="member-arrow">›</div>
+        </a>
+
+        <a class="member-tile" href="mailto:rongzegu@buffalo.edu" style="--delay:160ms">
+          <div class="member-avatar"><span>RG</span></div>
+          <div class="member-info">
+            <div class="member-name">Rongze Guan</div>
+            <div class="member-email">rongzegu@buffalo.edu</div>
+          </div>
+          <div class="member-arrow">›</div>
+        </a>
+
+        <a class="member-tile" href="mailto:araammar@buffalo.edu" style="--delay:240ms">
+          <div class="member-avatar"><span>AM</span></div>
+          <div class="member-info">
+            <div class="member-name">Araam Marmoud</div>
+            <div class="member-email">araammar@buffalo.edu</div>
+          </div>
+          <div class="member-arrow">›</div>
+        </a>
+
+        <a class="member-tile" href="mailto:kjpenapo@buffalo.edu" style="--delay:320ms">
+          <div class="member-avatar"><span>KP</span></div>
+          <div class="member-info">
+            <div class="member-name">Kevin Pena</div>
+            <div class="member-email">kjpenapo@buffalo.edu</div>
+          </div>
+          <div class="member-arrow">›</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ LINKS ============ -->
+    <section class="panel" data-panel="links">
+      <div class="panel-heading">
+        <div class="panel-num">03</div>
+        <div class="panel-title">Project Access</div>
+        <div class="panel-meta">Launch project resources</div>
+      </div>
+
+      <div class="links-grid">
+        <a class="link-tile" href="#" style="--delay:0ms">
+          <div class="link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 7h16M4 12h16M4 17h10"/>
+            </svg>
+          </div>
+          <div class="link-meta">
+            <div class="link-kicker">CRM PLATFORM</div>
+            <div class="link-name">Salesforce Application</div>
+            <div class="link-desc">Open the live Salesforce environment</div>
+          </div>
+          <div class="link-launch">LAUNCH ›</div>
+        </a>
+
+        <a class="link-tile" href="#" style="--delay:120ms">
+          <div class="link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="4" width="18" height="16" rx="1.5"/>
+              <path d="M3 9h18M8 4v16"/>
+            </svg>
+          </div>
+          <div class="link-meta">
+            <div class="link-kicker">DATABASE</div>
+            <div class="link-name">Access Database</div>
+            <div class="link-desc">Download the supporting Access file</div>
+          </div>
+          <div class="link-launch">LAUNCH ›</div>
+        </a>
+
+        <a class="link-tile" href="#" style="--delay:240ms">
+          <div class="link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="4" width="20" height="13" rx="1.5"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div class="link-meta">
+            <div class="link-kicker">DELIVERABLE</div>
+            <div class="link-name">Project Presentation</div>
+            <div class="link-desc">View final slide deck</div>
+          </div>
+          <div class="link-launch">LAUNCH ›</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom bar -->
+  <footer class="bottombar">
+    <div class="bottombar-left">
+      <span class="bb-dot"></span>
+      SealPoint Consulting · MGS 351 · University at Buffalo
+    </div>
+    <div class="bottombar-right">
+      <span class="kbd kbd-a">A</span> Select
+      <span class="kbd kbd-b">B</span> Back
+      <span class="kbd kbd-lb">LB</span><span class="kbd kbd-rb">RB</span> Switch
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
